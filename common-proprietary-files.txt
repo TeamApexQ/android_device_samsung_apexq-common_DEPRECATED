@@ -1,3 +1,4 @@
+## FIXME: much of this will be different 8260A, BT fm etc
 # Bins
 bin/bridgemgrd
 bin/btnvtool

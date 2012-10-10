@@ -40,7 +40,7 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 COMMON_GLOBAL_CFLAGS += -DQCOM_ROTATOR_KERNEL_FORMATS
 
 # Recovery
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/d2-common/recovery/recovery_keys.c
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/apexq-common/recovery/recovery_keys.c
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_LARGE_FILESYSTEM := true
