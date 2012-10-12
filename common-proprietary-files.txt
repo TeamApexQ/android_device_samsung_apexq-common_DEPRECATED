@@ -3,7 +3,7 @@
 bin/bridgemgrd
 bin/btnvtool
 bin/ds_fmc_appd
-bin/immvibed
+#bin/immvibed #some S3 vibration crap
 bin/mpdecision
 bin/port-bridge
 bin/usbhub
@@ -16,10 +16,10 @@ etc/thermald.conf_F
 etc/thermald.conf_N
 etc/thermald.conf_S
 
-# Bluetooth firmware
-bin/bcm4334.hcd
-bin/bcm4334_murata.hcd
-bin/bcm4334_semco.hcd
+# TODO: verify that onboard BT doesn't need firmware
+#bin/bcm4334.hcd
+#bin/bcm4334_murata.hcd
+#bin/bcm4334_semco.hcd
 
 # Audio
 lib/hw/alsa.msm8960.so
@@ -97,7 +97,8 @@ lib/libquipc_ulp_adapter.so
 lib/libwifiscanner.so
 
 # NFC
-lib/hw/nfc.MSM8960.so
+#lib/hw/nfc.MSM8960.so
+lib/hw/nfc.MSM8260A.so
 vendor/firmware/libpn544_fw.so
 
 # Sensors
@@ -118,7 +119,7 @@ lib/hw/camera.msm8960.so
 lib/libmmjpeg.so
 lib/libmmstillomx.so
 lib/libimage-jpeg-enc-omx-comp.so
-lib/libvdis.so
+#lib/libvdis.so
 lib/libsecnativefeature.so
 lib/libgemini.so
 lib/liboemcamera.so
@@ -132,18 +133,24 @@ lib/libchromatix_imx074_default_video.so
 lib/libchromatix_imx074_preview.so
 lib/libchromatix_ov2720_default_video.so
 lib/libchromatix_ov2720_preview.so
-lib/libchromatix_s5k6a3yx_default_video.so
-lib/libchromatix_s5k6a3yx_preview.so
-lib/libchromatix_s5k6a3yx_vt_hd.so
-lib/libchromatix_s5k6a3yx_vt.so
+# there are also "fps" libs on the device
+lib/libchromatix_s5k3l1yx_default_video.so
+lib/libchromatix_s5k3l1yx_preview.so
+lib/libchromatix_s5k3l1yx_video_hd.so
+lib/libchromatix_s5k3l1yx_zsl.so
+#
+#lib/libchromatix_s5k6a3yx_default_video.so
+#lib/libchromatix_s5k6a3yx_preview.so
+#lib/libchromatix_s5k6a3yx_vt_hd.so
+#lib/libchromatix_s5k6a3yx_vt.so
 
 # Camera firmware
-cameradata/SlimISP_GC.bin
-cameradata/SlimISP_GD.bin
-cameradata/SlimISP_GE.bin
-cameradata/SlimISP_ZC.bin
-cameradata/SlimISP_ZD.bin
-cameradata/SlimISP_ZE.bin
+#cameradata/SlimISP_GC.bin
+#cameradata/SlimISP_GD.bin
+#cameradata/SlimISP_GE.bin
+#cameradata/SlimISP_ZC.bin
+#cameradata/SlimISP_ZD.bin
+#cameradata/SlimISP_ZE.bin
 cameradata/datapattern_420sp.yuv
 cameradata/datapattern_front_420sp.yuv
 
@@ -155,19 +162,19 @@ lib/libv8.so
 
 # Wi-Fi
 bin/macloader
-bin/brcm_poke_helper
-etc/wifi/bcmdhd_apsta.bin_b1
-etc/wifi/bcmdhd_apsta.bin_b2
-etc/wifi/bcmdhd_p2p.bin_b1
-etc/wifi/bcmdhd_p2p.bin_b2
-etc/wifi/bcmdhd_sta.bin_b1
-etc/wifi/bcmdhd_sta.bin_b2
-etc/wifi/bcmdhd_mfg.bin_b1
-etc/wifi/bcmdhd_mfg.bin_b2
-etc/wifi/nvram_mfg.txt
-etc/wifi/nvram_mfg.txt_murata
-etc/wifi/nvram_net.txt
-etc/wifi/nvram_net.txt_murata
+#bin/brcm_poke_helper
+#etc/wifi/bcmdhd_apsta.bin_b1
+#etc/wifi/bcmdhd_apsta.bin_b2
+#etc/wifi/bcmdhd_p2p.bin_b1
+#etc/wifi/bcmdhd_p2p.bin_b2
+#etc/wifi/bcmdhd_sta.bin_b1
+#etc/wifi/bcmdhd_sta.bin_b2
+#etc/wifi/bcmdhd_mfg.bin_b1
+#etc/wifi/bcmdhd_mfg.bin_b2
+#etc/wifi/nvram_mfg.txt
+#etc/wifi/nvram_mfg.txt_murata
+#etc/wifi/nvram_net.txt
+#etc/wifi/nvram_net.txt_murata
 etc/wifi/wpa_supplicant.conf
 
 # Firmware
