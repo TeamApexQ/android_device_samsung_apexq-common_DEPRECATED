@@ -1794,11 +1794,11 @@ SectionModifier
 
 	EnableSequence
                 'MultiMedia1 Mixer VOC_REC_UL':1:1
-        EndSequence
+	EndSequence
 
-        DisableSequence
+	DisableSequence
                 'MultiMedia1 Mixer VOC_REC_UL':1:0
-        EndSequence
+	EndSequence
 
 	# ALSA PCMs
 	CapturePCM 0
@@ -2080,12 +2080,6 @@ SectionModifier
 	DisableSequence
 		'PRI_RX_Voice Mixer CSVoice':1:0
 		'Voice_Tx Mixer PRI_TX_Voice':1:0
-		'HPHL DAC Switch':1:0
-		'HPHR DAC Switch':1:0
-		'HPHL Volume':1:0
-		'HPHR Volume':1:0
-		'RX1 Digital Volume':1:0
-		'RX2 Digital Volume':1:0
 	EndSequence
 
 	# ALSA PCMs
