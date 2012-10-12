@@ -150,15 +150,15 @@ on post-fs-data
     chmod 0664 /sys/devices/platform/msm_sdcc.3/polling
     chmod 0664 /sys/devices/platform/msm_sdcc.4/polling
 
+    # For disabling softkeys
+    chown root system /sys/class/leds/button-backlight/max_brightness
+    chmod 0664 /sys/class/leds/button-backlight/max_brightness
+
     # Chown polling nodes as needed from UI running on system server
     chown system system /sys/devices/platform/msm_sdcc.1/polling
     chown system system /sys/devices/platform/msm_sdcc.2/polling
     chown system system /sys/devices/platform/msm_sdcc.3/polling
     chown system system /sys/devices/platform/msm_sdcc.4/polling
-
-    # For disabling softkeys
-    chown root system /sys/class/leds/button-backlight/max_brightness
-    chmod 0664 /sys/class/leds/button-backlight/max_brightness
 
     #Create the symlink to qcn wpa_supplicant folder for ar6000 wpa_supplicant
     mkdir /data/system 0775 system system
@@ -190,11 +190,17 @@ on post-fs-data
     chmod 0660 /data/hostapd/hostapd.conf
 
     # Create /data/time folder for time-services
-    mkdir /data/time/ 0700 system system
+    mkdir /data/time/ 0700 system system	# old one
+    mkdir /efs/time/ 0700 system system		# new one
 
     mkdir /data/bluetooth 0770 bluetooth bluetooth
     # Enable the setgid bit on the directory
     chmod 2770 /data/bluetooth
+
+# disabled from stock -> cm for d2mo
+## MTP Device permission.
+#    chmod 0660 /dev/usb_mtp_gadget
+#    chown system system /dev/usb_mtp_gadget
 
     # Enabling a thermal daemon
     setprop persist.thermal.monitor true
@@ -442,8 +448,8 @@ service qcom-wifi /system/bin/sh /system/etc/init.qcom.wifi.sh
     class late_start
     oneshot
 
-#on property:init.svc.samsungani=stopped
 on property:init.svc.bootanim=stopped
+#on property:init.svc.samsungani=stopped
     start qcom-post-boot
 
 service atfwd /system/bin/ATFWD-daemon
@@ -470,12 +476,6 @@ chown system graphics /sys/class/graphics/fb1/hpd
 chown system graphics /sys/class/graphics/fb1/hdcp_present 
 chown system graphics /sys/class/graphics/fb1/hdmi_mode
 chmod 0660 /sys/class/graphics/fb1/power_state	
-service ppd /system/bin/mm-pp-daemon
-    class late_start
-    user system
-    socket pps stream 0660 system system graphics
-    group system graphics
-		disabled
 
 service hostapd /system/bin/hostapd -dddd /data/hostapd/hostapd.conf
     class late_start
