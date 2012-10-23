@@ -26,12 +26,14 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 #
+
 on early-init
     mkdir /firmware 0771 system system
     symlink /data/tombstones /tombstones
     mkdir /efs 0771 system system
 
 on emmc-fs
+# on emmc mount the partition containing firmware
     mount_all fstab.qcom
 
     # Keeping following partitions outside fstab file. As user may not have
@@ -88,7 +90,7 @@ on post-fs-data
     chown system radio /sys/class/sensors/accelerometer_sensor/reactive_alert
     chown system radio /sys/class/sensors/proximity_sensor/enable
     chown system radio /sys/class/sensors/proximity_sensor/prox_avg
-    chown system radio /sys/class/sensors/proximity_sensor/prox_cal
+   chown system radio /sys/class/sensors/proximity_sensor/prox_cal
     chown system radio /sys/class/sensors/light_sensor/enable
 
     #earjack
@@ -126,7 +128,7 @@ on post-fs-data
     chown system system /dev/tzic
 
     # h2k permission
-    chmod 0644 /efs/redata.bin
+   chmod 0644 /efs/redata.bin
 
     # Permissions for Camera
     chown system radio /sys/class/camera/rear/rear_camfw
@@ -165,6 +167,7 @@ on post-fs-data
     chown radio system /sys/class/lcd/panel/gamma_mode
     chown system radio /sys/class/sec/switch/reset_switch
 
+    ## TODO: FO if this is valid, think device is not on apexq
     # SAMSUNG CMC624
     chown system system  /sys/class/mdnie/mdnie/lcdtype
     chown system system  /sys/class/mdnie/mdnie/lcd_power
@@ -231,13 +234,13 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
     group system camera inet input graphics
 
 service thermald /system/bin/thermald
-    class main
-    user root
-    group root
+   class main
+   user root
+   group root
 
 service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
-    user root
-    disabled
+   user root
+   disabled
 
 service kickstart /system/bin/qcks -i /firmware/image
     oneshot
@@ -264,4 +267,4 @@ service bugreport /system/bin/bugmailer.sh -v
 	disabled
 	oneshot
 	keycodes 114 115 116
-
+	

@@ -20,23 +20,23 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 PRODUCT_COPY_FILES += device/common/gps/gps.conf_US_SUPL:system/etc/gps.conf
 
 ## (2) Also get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/samsung/d2-common/d2-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/apexq-common/apexq-common-vendor.mk)
 
 ## overlays
-DEVICE_PACKAGE_OVERLAYS += device/samsung/d2-common/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/apexq-common/overlay
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 720
+TARGET_SCREEN_WIDTH := 480
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
-	device/samsung/d2-common/audio/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x \
-	device/samsung/d2-common/audio/audio_policy.conf:system/etc/audio_policy.conf
+	device/samsung/apexq-common/audio/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x \
+	device/samsung/apexq-common/audio/audio_policy.conf:system/etc/audio_policy.conf
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -53,7 +53,7 @@ PRODUCT_PACKAGES += Torch
 
 # Vold configuration
 PRODUCT_COPY_FILES += \
-    device/samsung/d2-common/vold.fstab:system/etc/vold.fstab
+    device/samsung/apexq-common/vold.fstab:system/etc/vold.fstab
 
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -83,7 +83,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.apm_sim_not_pwdn=1 \
     persist.gps.qmienabled=true \
     ro.telephony.call_ring.multiple=0 \
-    ro.sf.lcd_density=320 \
+    ro.sf.lcd_density=240 \
     ro.ril.transmitpower=true \
     ro.opengles.version=131072 \
     persist.audio.fluence.mode=endfire \
