@@ -34,18 +34,18 @@ etc/init.qcom.bt.sh
 
 
 # Audio
-#lib/hw/alsa.msm8960.so
-#lib/hw/audio_policy.msm8960.so
-#lib/hw/audio.primary.msm8960.so
+lib/hw/alsa.msm8960.so
+lib/hw/audio_policy.msm8960.so
+lib/hw/audio.primary.msm8960.so
 lib/libacdbloader.so
-#lib/libalsa-intf.so
+lib/libalsa-intf.so
 lib/libaudcal.so
 lib/libaudioalsa.so
-#lib/libsamsungRecord.so
-#lib/libaudiopolicy_sec.so
-#lib/lib_Samsung_Resampler.so
-#lib/lib_SamsungRec_V01005.so
-#lib/libcontrolcsc.so
+lib/libsamsungRecord.so
+lib/libaudiopolicy_sec.so
+lib/lib_Samsung_Resampler.so
+lib/lib_SamsungRec_V01005.so
+lib/libcontrolcsc.so
 
 # mmparser extended
 lib/libmmparser.so
@@ -63,7 +63,7 @@ lib/libgsl.so
 lib/libC2D2.so
 lib/libOpenVG.so
 lib/libsc-a2xx.so
-#lib/libsc-a3xx.so
+lib/libsc-a3xx.so
 lib/libmm-color-convertor.so
 
 # Radio
