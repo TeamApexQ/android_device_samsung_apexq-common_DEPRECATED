@@ -276,10 +276,10 @@ service cnd /system/bin/cnd
     socket cnd stream 660 root radio
     disabled
 
-service rmt_storage /system/bin/rmt_storage
-    class core
-    user root
-    disabled
+#service rmt_storage /system/bin/rmt_storage
+#    class core
+#    user root
+#    disabled
 
 on property:ro.emmc=1
     start rmt_storage
