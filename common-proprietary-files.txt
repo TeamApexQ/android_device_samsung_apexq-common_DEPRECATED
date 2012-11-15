@@ -92,6 +92,7 @@ lib/libqmi_csi.so
 lib/libqmi_common_so.so
 lib/libqmi_encdec.so
 lib/libatparser.so
+lib/libqc-opt.so
 
 # GPS
 bin/wiperiface_v02
@@ -188,6 +189,7 @@ bin/macloader
 #etc/wifi/nvram_net.txt
 #etc/wifi/nvram_net.txt_murata
 etc/wifi/wpa_supplicant.conf
+lib/modules/prima/prima_wlan.ko
 
 # Firmware
 etc/firmware/a225p5_pm4.fw
