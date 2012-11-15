@@ -61,9 +61,50 @@ PRODUCT_COPY_FILES += \
 	device/samsung/apexq-common/ramdisk/init.bt.rc:root/init.bt.rc \
 	device/samsung/apexq-common/ramdisk/init.sensor.rc:root/init.sensor.rc
 
+# Keylayouts and keychars
+
+PRODUCT_COPY_FILES += \
+    device/samsung/apexq-common/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
+    device/samsung/apexq-common/keylayout/Generic.kl:system/usr/keylayout/Generic.kl \
+    device/samsung/apexq-common/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl\
+    device/samsung/apexq-common/keylayout/cyttsp-i2c.kl:system/usr/keylayout/cyttsp-i2c.kl \
+    device/samsung/apexq-common/keylayout/fsa9485.kl:system/usr/keylayout/fsa9485.kl \
+    device/samsung/apexq-common/keylayout/keypad_8960.kl:system/usr/keylayout/keypad_8960.kl \
+	device/samsung/apexq-common/keylayout/msm8960-snd-card_Button_Jack.kl:system/usr/keylayout/msm8960-snd-card_Button_Jack.kl \
+    device/samsung/apexq-common/keylayout/sec_key.kl:system/usr/keylayout/sec_key.kl \
+    device/samsung/apexq-common/keylayout/sec_keys.kl:system/usr/keylayout/sec_keys.kl \
+    device/samsung/apexq-common/keylayout/sec_powerkey.kl:system/usr/keylayout/sec_powerkey.kl \
+    device/samsung/apexq-common/keylayout/sec_touchkey.kl:system/usr/keylayout/sec_touchkey.kl \
+    device/samsung/apexq-common/keylayout/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_028e.kl \
+    device/samsung/apexq-common/keylayout/Vendor_046d_Product_c216.kl:system/usr/keylayout/Vendor_046d_Product_c216.kl \
+    device/samsung/apexq-common/keylayout/Vendor_046d_Product_c294.kl:system/usr/keylayout/Vendor_046d_Product_c294.kl \
+    device/samsung/apexq-common/keylayout/Vendor_046d_Product_c299.kl:system/usr/keylayout/Vendor_046d_Product_c299.kl \
+    device/samsung/apexq-common/keylayout/Vendor_046d_Product_c532.kl:system/usr/keylayout/Vendor_046d_Product_c532.kl \
+    device/samsung/apexq-common/keylayout/Vendor_04e8_Product_7021.kl:system/usr/keylayout/Vendor_04e8_Product_7021.kl \
+    device/samsung/apexq-common/keylayout/Vendor_054c_Product_0268.kl:system/usr/keylayout/Vendor_054c_Product_0268.kl \
+    device/samsung/apexq-common/keylayout/Vendor_05ac_Product_0239.kl:system/usr/keylayout/Vendor_05ac_Product_0239.kl \
+    device/samsung/apexq-common/keylayout/Vendor_22b8_Product_093d.kl:system/usr/keylayout/Vendor_22b8_Product_093d.kl
+
+PRODUCT_COPY_FILES += \
+    device/samsung/apexq-common/keychars/Generic.kcm:system/usr/keychars/Generic.kcm \
+    device/samsung/apexq-common/keychars/qwerty.kcm:system/usr/keychars/qwerty.kcm \
+    device/samsung/apexq-common/keychars/qwerty2.kcm:system/usr/keychars/qwerty2.kcm \
+    device/samsung/apexq-common/keychars/Virtual.kcm:system/usr/keychars/Virtual.kcm \
+    device/samsung/apexq-common/keychars/keypad_8960.kcm:system/usr/keychars/keypad_8960.kcm
+
+
+PRODUCT_COPY_FILES += \
+    device/samsung/apexq-common/idc/qwerty.idc:system/usr/idc/qwerty.idc \
+    device/samsung/apexq-common/idc/qwerty2.idc:system/usr/idc/qwerty2.idc
+
+
 # Vold configuration
 PRODUCT_COPY_FILES += \
     device/samsung/apexq-common/vold.fstab:system/etc/vold.fstab
+
+# Wifi
+PRODUCT_COPY_FILES += \
+    device/samsung/apexq-common/configs/init.qcom.wifi.sh:system/etc/init.qcom.wifi.sh
 
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
