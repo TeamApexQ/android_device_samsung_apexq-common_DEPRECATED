@@ -507,7 +507,7 @@ key PLUS {
     shift+alt:                          '+'
 }
 
-key QUESTION {
+key INFO {
     label:                              '?'
     number:                             '?'
     base:                               '?'

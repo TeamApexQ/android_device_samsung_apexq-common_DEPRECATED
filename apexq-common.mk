@@ -72,6 +72,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/apexq-common/keylayout/keypad_8960.kl:system/usr/keylayout/keypad_8960.kl \
 	device/samsung/apexq-common/keylayout/msm8960-snd-card_Button_Jack.kl:system/usr/keylayout/msm8960-snd-card_Button_Jack.kl \
     device/samsung/apexq-common/keylayout/sec_key.kl:system/usr/keylayout/sec_key.kl \
+    device/samsung/apexq-common/keylayout/sec_keypad.kl:system/usr/keylayout/sec_keypad.kl \
     device/samsung/apexq-common/keylayout/sec_keys.kl:system/usr/keylayout/sec_keys.kl \
     device/samsung/apexq-common/keylayout/sec_powerkey.kl:system/usr/keylayout/sec_powerkey.kl \
     device/samsung/apexq-common/keylayout/sec_touchkey.kl:system/usr/keylayout/sec_touchkey.kl \
@@ -87,6 +88,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     device/samsung/apexq-common/keychars/Generic.kcm:system/usr/keychars/Generic.kcm \
+    device/samsung/apexq-common/keychars/sec_keypad.kcm:system/usr/keychars/sec_keypad.kcm \
     device/samsung/apexq-common/keychars/qwerty.kcm:system/usr/keychars/qwerty.kcm \
     device/samsung/apexq-common/keychars/qwerty2.kcm:system/usr/keychars/qwerty2.kcm \
     device/samsung/apexq-common/keychars/Virtual.kcm:system/usr/keychars/Virtual.kcm \
