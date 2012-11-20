@@ -157,6 +157,38 @@ lib/libchromatix_s5k3l1yx_zsl.so
 #lib/libchromatix_s5k6a3yx_vt_hd.so
 #lib/libchromatix_s5k6a3yx_vt.so
 
+# OMX
+lib/libOmxAacDec.so
+lib/libOmxAacEnc.so
+lib/libOmxAmrEnc.so
+lib/libOmxCore.so
+lib/libOmxEvrcDec.so
+lib/libOmxEvrcEnc.so
+lib/libOmxMux.so
+lib/libOmxQcelp13Dec.so
+lib/libOmxQcelp13Enc.so
+lib/libOmxVdec.so
+lib/libOmxVenc.so
+lib/libOmxWmaDec.so
+lib/libimage-omx-common.so
+lib/libmm-omxcore.so
+lib/libsomxaacd.so
+lib/libsomxaace.so
+lib/libsomxac3d.so
+lib/libsomxamrd.so
+lib/libsomxamre.so
+lib/libsomxcmn.so
+lib/libsomxcore.so
+lib/libsomxflacd.so
+lib/libsomxmp3d.so
+lib/libsomxmp43d.so
+lib/libsomxsr263d.so
+lib/libsomxvp8d.so
+lib/libsomxwmad.so
+lib/libsomxwmv7d.so
+lib/libsomxwmv8d.so
+
+
 # Camera firmware
 #cameradata/SlimISP_GC.bin
 #cameradata/SlimISP_GD.bin
