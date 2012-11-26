@@ -31,7 +31,8 @@ etc/init.qcom.bt.sh
 #bin/bcm4334_murata.hcd
 #bin/bcm4334_semco.hcd
 #wlandutservice was removed from d2tmo
-
+# :(
+lib/libbluedroid.so
 
 # Audio
 lib/hw/alsa.msm8960.so
