@@ -26,8 +26,8 @@ key A {
     number:                             '2'
     base:                               'a'
     shift, capslock:                    'A'
-    alt:                                none
-    shift+alt, capslock+alt:            none
+    alt:                                '\t'
+    shift+alt, capslock+alt:            '\t'
 }
 
 key B {
@@ -260,8 +260,8 @@ key COMMA {
     number:                             ','
     base:                               ','
     shift:                              ','
-    alt:                                none
-    shift+alt:                          none
+    alt:                                '\uEF01'
+    shift+alt:                          '\uEF01'
 }
 
 key PERIOD {
@@ -269,8 +269,8 @@ key PERIOD {
     number:                             '.'
     base:                               '.'
     shift:                              '.'
-    alt:                                none
-    shift+alt:                          none
+    alt:                                '\uEF03'
+    shift+alt:                          '\uEF03'
 }
 
 key AT {
