@@ -66,8 +66,8 @@ BOARD_WLAN_DEVICE := qcwcn
 #BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_qcwcn
 #BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_qcwcn
 
-WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/prima/prima_wlan.ko"
-WIFI_DRIVER_MODULE_NAME     := "prima_wlan"
+WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/wlan.ko"
+WIFI_DRIVER_MODULE_NAME     := "wlan"
 WIFI_DRIVER_MODULE_ARG      := 
 WIFI_DRIVER_FW_PATH_PARM    := 
 WIFI_DRIVER_FW_PATH_AP      := 
