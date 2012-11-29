@@ -122,6 +122,10 @@ on boot
     write /proc/sys/net/ipv6/conf/rmnet_sdio6/accept_ra 2
     write /proc/sys/net/ipv6/conf/rmnet_sdio7/accept_ra 2
 
+    # Fix permissions on camera flash control
+    chmod 0660 /sys/devices/virtual/camera/rear/rear_flash
+    chown root camera /sys/devices/virtual/camera/rear/rear_flash
+
 # import cne init file
 on post-fs
     export_rc /persist/init.cne.rc
@@ -197,10 +201,10 @@ on post-fs-data
     # Enable the setgid bit on the directory
     chmod 2770 /data/bluetooth
 
-# disabled from stock -> cm for d2mo
+
 ## MTP Device permission.
-#    chmod 0660 /dev/usb_mtp_gadget
-#    chown system system /dev/usb_mtp_gadget
+    chmod 0660 /dev/usb_mtp_gadget
+    chown root mtp /dev/usb_mtp_gadget
 
     # Enabling a thermal daemon
     setprop persist.thermal.monitor true
