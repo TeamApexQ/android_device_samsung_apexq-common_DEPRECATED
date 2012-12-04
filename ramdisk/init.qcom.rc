@@ -203,7 +203,7 @@ on post-fs-data
 
 
 ## MTP Device permission.
-    chmod 0666 /dev/usb_mtp_gadget
+    chmod 0660 /dev/usb_mtp_gadget
     chown system mtp /dev/usb_mtp_gadget
 
     # Enabling a thermal daemon
