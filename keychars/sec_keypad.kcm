@@ -44,8 +44,8 @@ key C {
     number:                             '2'
     base:                               'c'
     shift, capslock:                    'C'
-    alt:                                none
-    shift+alt, capslock+alt:            none
+    alt:                                '\u2764'
+    shift+alt, capslock+alt:            '\u2764'
 }
 
 key D {
@@ -233,8 +233,8 @@ key X {
     number:                             '9'
     base:                               'x'
     shift, capslock:                    'X'
-    alt:                                none
-    shift+alt, capslock+alt:            none
+    alt:                                '\u20AC'
+    shift+alt, capslock+alt:            '\u20AC'
 }
 
 key Y {
@@ -251,8 +251,8 @@ key Z {
     number:                             '9'
     base:                               'z'
     shift, capslock:                    'Z'
-    alt:                                none
-    shift+alt, capslock+alt:            none
+    alt:                                '\u00A3'
+    shift+alt, capslock+alt:            '\u00A3'
 }
 
 key COMMA {
@@ -280,15 +280,6 @@ key AT {
     shift:                              '0'
     alt:                                '0'
     shift+alt:                          '\u2022'
-}
-
-key SLASH {
-    label:                              '/'
-    number:                             '/'
-    base:                               '/'
-    shift:                              '?'
-    alt:                                '?'
-    shift+alt:                          '\\'
 }
 
 key SPACE {
@@ -507,7 +498,7 @@ key PLUS {
     shift+alt:                          '+'
 }
 
-key INFO {
+key SLASH {
     label:                              '?'
     number:                             '?'
     base:                               '?'
